@@ -933,6 +933,10 @@ proxy:
   pdb:
     usePolicy: true
     maxUnavailable: 1
+  ### Proxy service account
+  ## templates/proxy-service-account.yaml
+  service_account:
+    annotations: { }
 
 ## Pulsar Extra: Dashboard
 ## templates/dashboard-deployment.yaml

@@ -34,13 +34,6 @@ rules:
       - use
 ---
 
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: "{{ template "pulsar.fullname" . }}-{{ .Values.proxy.component }}"
-  namespace: {{ template "pulsar.namespace" . }}
----
-
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
