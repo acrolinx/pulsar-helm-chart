@@ -907,6 +907,12 @@ proxy:
   service:
     annotations: {}
     type: LoadBalancer
+
+    ## If necessary, you can configure the ports of the service to differ from its targetPorts (configured above), e.g.
+    ## if you want the ports exposed by the load balancer to differ from the ports exposed by the proxy pods:
+    ports:
+      http: 80
+      pulsar: 6650
   ## Proxy ingress
   ## templates/proxy-ingress.yaml
   ##
